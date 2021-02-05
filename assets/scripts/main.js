@@ -12,7 +12,7 @@ function playSound()
 {
     let sound = document.getElementById('volume-number').value;
     let horn = document.getElementById('horn-sound');
-    horn.volume = sound;
+    horn.volume = sound / 100.0;
     horn.play();
 }
 
