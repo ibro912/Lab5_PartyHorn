@@ -1,9 +1,9 @@
 // main.js0
-document.getElementById('honk-btn').addEventListener("submit", playSound);
-document.getElementById('volume-number').addEventListener("input", changeVolume(document.getElementById('volume-number').value));
+document.getElementById('honk-btn').addEventListener("submit", playSound(event));
+document.getElementById('volume-number').addEventListener("input", changeVolume(event, document.getElementById('volume-number').value));
 
 
-function changeVolume(evt, newVolumeNumber)
+function changeVolume(event, newVolumeNumber)
 {
     evt.preventDefault();
     let sound = document.getElementById('volume-number');
@@ -13,7 +13,7 @@ function changeVolume(evt, newVolumeNumber)
 
 }
 
-function playSound(evt)
+function playSound(event)
 { 
     evt.preventDefault();
     let sound = document.getElementById('volume-number').value;
