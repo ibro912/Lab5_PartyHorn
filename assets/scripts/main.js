@@ -7,6 +7,7 @@ document.getElementById('volume-number').addEventListener("input", changeVolume)
 
 document.getElementById('volume-slider').addEventListener("change", changeSlider);
 
+document.getElementById('audio-selection').addEventListener("change", changeAudio);
 
 function changeVolume()
 {
@@ -31,27 +32,33 @@ function changeSlider()
 function changeVolIcon()
 {
     let volume = document.getElementById('volume-number');
+    let button = document.getElementById('honk-btn');
 
     if(volume.value <= 0)
     {
-        document.getElementById('honk-btn').disabled = true;
+        button.disabled = true;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-0.svg";
     }
     else if(volume.value > 0 && volume.value < 34)
     {
-        document.getElementById('honk-btn').disabled = false;
+        button.disabled = false;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-1.svg";
     }
     else if(volume.value > 33 && volume.value < 67)
     {
-        document.getElementById('honk-btn').disabled = false;
+        button.disabled = false;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-2.svg";
     }
     else
     {
-        document.getElementById('honk-btn').disabled = false;
+        button.disabled = false;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-3.svg";
     }
+}
+
+function changeAudio()
+{
+
 }
 
 function playSound()
