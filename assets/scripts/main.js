@@ -1,9 +1,11 @@
 // main.js0
-document.getElementById('honk-btn').addEventListener("click", playSound);
+document.getElementById('honk-btn').addEventListener("submit", playSound);
+document.getElementById('volume-number').addEventListener("input", changeVolume(input));
 
 
-function changeVolume(newVolumeNumber)
+function changeVolume(evt, newVolumeNumber)
 {
+    evt.preventDefault();
     let sound = document.getElementById('volume-number');
     let slider = document.getElementById('volume-slider');
     sound.value = newVolumeNumber;
