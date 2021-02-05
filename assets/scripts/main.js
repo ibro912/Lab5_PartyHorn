@@ -59,6 +59,25 @@ function changeVolIcon()
 
 function changeAudio()
 {
+    let hornType = document.getElementById('horn-sound');
+    let soundImage = document.getElementById('sound-image');
+
+    if(document.getElementById('radio-air-horn').checked)
+    {
+        hornType.src = "./assets/media/audio/air-horn.mp3";
+        soundImage.src = "./assets/media/images/air-horn.svg";
+    }
+    if(document.getElementById('radio-car-horn').checked)
+    {
+        hornType.src = "./assets/media/audio/car-horn.mp3";
+        soundImage.src = "./assets/media/images/car.svg";
+    }
+    if(document.getElementById('radio-party-horn').checked)
+    {
+        hornType.src = "./assets/media/audio/party-horn.mp3";
+        soundImage.src = "./assets/media/images/party-horn.svg";
+    }
+
 
 }
 
