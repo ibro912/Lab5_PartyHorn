@@ -6,7 +6,7 @@ document.getElementById('honk-btn').addEventListener("submit", playSound);
 document.getElementById('volume-number').addEventListener("input", changeVolume(document.getElementById('volume-number').value));
 
 
-function changeVolume(e, newVolumeNumber)
+function changeVolume(newVolumeNumber, e)
 {
     e.preventDefault();
     let sound = document.getElementById('volume-number');
