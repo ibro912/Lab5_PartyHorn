@@ -1,5 +1,5 @@
 // main.js0
-document.getElementById('honk-btn').addEventListener("submit", playSound);
+document.getElementById('honk-btn').addEventListener("click", playSound);
 
 
 function changeVolume(newVolumeNumber)
