@@ -1,5 +1,6 @@
 // main.js0
-document.getElementById('honk-btn').onclick.preventdefault();
+document.getElementById('honk-btn').addEventListener("submit", playSound);
+
 
 function changeVolume(newVolumeNumber)
 {
@@ -10,8 +11,9 @@ function changeVolume(newVolumeNumber)
 
 }
 
-function playSound()
+function playSound(evt)
 { 
+    evt.preventDefault();
     let sound = document.getElementById('volume-number').value;
     let horn = document.getElementById('horn-sound');
     horn.volume = sound / 100.0;
@@ -20,4 +22,3 @@ function playSound()
 
 
 document.getElementById('volume-number').input = changeVolume(document.getElementById('volume-number').value);
-document.getElementById('honk-btn').onclick = playSound(); 
