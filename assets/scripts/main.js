@@ -33,26 +33,27 @@ function changeVolIcon()
 {
     let volume = document.getElementById('volume-number');
     let button = document.getElementById('honk-btn');
+    let volIcon = document.getElementById('volume-image');
 
     if(volume.value <= 0)
     {
         button.disabled = true;
-        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-0.svg";
+        volIcon.src = "./assets/media/icons/volume-level-0.svg";
     }
     else if(volume.value > 0 && volume.value < 34)
     {
         button.disabled = false;
-        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-1.svg";
+        volIcon.src = "./assets/media/icons/volume-level-1.svg";
     }
     else if(volume.value > 33 && volume.value < 67)
     {
         button.disabled = false;
-        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-2.svg";
+        volIcon.src = "./assets/media/icons/volume-level-2.svg";
     }
     else
     {
         button.disabled = false;
-        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-3.svg";
+        volIcon.src = "./assets/media/icons/volume-level-3.svg";
     }
 }
 
