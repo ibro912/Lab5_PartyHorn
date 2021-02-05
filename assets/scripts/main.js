@@ -10,13 +10,12 @@ function changeVolume(newVolumeNumber)
 
 function playSound()
 {
-    let sound = document.getElementById('volume-number');
+    let sound = document.getElementById('volume-number').value;
     let horn = document.getElementById('horn-sound');
     horn.volume = sound;
     horn.play();
 }
 
 
-document.getElementById('volume-number').value = changeVolume(document.getElementById('volume-number').value);
+document.getElementById('volume-number').onchange = changeVolume(document.getElementById('volume-number').value);
 document.getElementById('honk-btn').onclick = playSound(); 
-// TODO
