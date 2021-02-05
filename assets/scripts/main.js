@@ -3,25 +3,23 @@ var soundEvt
 var btnEvt
 
 document.getElementById('honk-btn').addEventListener("submit", playSound);
-document.getElementById('volume-number').addEventListener("input", changeVolume(document.getElementById('volume-number').value));
+document.getElementById('volume-number').addEventListener("input", changeVolume);
 
 
-function changeVolume(newVolumeNumber, event)
+function changeVolume()
 {
     event.preventDefault();
     let sound = document.getElementById('volume-number');
     let slider = document.getElementById('volume-slider');
-    sound.value = newVolumeNumber;
-    slider.value = newVolumeNumber;
+    let hornSound = document.getElementById("horn-sound").volume = sound.value/100;
+    slider.value = sound.value;
 
 }
 
-function playSound(event)
+function playSound()
 { 
     event.preventDefault();
-    let sound = document.getElementById('volume-number').value;
-    let horn = document.getElementById('horn-sound');
-    horn.volume = sound / 100.0;
+    let horn = document.getElementById("horn-sound");
     horn.play();
 }
 
