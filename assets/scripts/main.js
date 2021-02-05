@@ -2,7 +2,7 @@
 var soundEvt
 var btnEvt
 
-document.getElementById('honk-btn').addEventListener("submit", playSound);
+document.getElementById('honk-btn').addEventListener("click", playSound);
 document.getElementById('volume-number').addEventListener("input", changeVolume);
 
 
