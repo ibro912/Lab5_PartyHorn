@@ -32,17 +32,17 @@ function changeVolIcon()
 {
     let volume = document.getElementById('volume-number');
 
-    if(volume <= 0)
+    if(volume.value <= 0)
     {
         document.getElementById('honk-btn').disabled = true;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-0.svg";
     }
-    else if(volume > 0 && volume < 34)
+    else if(volume.value > 0 && volume.value < 34)
     {
         document.getElementById('honk-btn').disabled = false;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-1.svg";
     }
-    else if(volume > 33 && volume < 67)
+    else if(volume.value > 33 && volume.value < 67)
     {
         document.getElementById('honk-btn').disabled = false;
         document.getElementById('volume-image').src = "./assets/media/icons/volume-level-2.svg";
