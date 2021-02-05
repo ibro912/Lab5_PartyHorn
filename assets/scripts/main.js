@@ -1,11 +1,11 @@
 // main.js0
-document.getElementById('honk-btn').addEventListener("submit", playSound(event));
-document.getElementById('volume-number').addEventListener("input", changeVolume(event, document.getElementById('volume-number').value));
+document.getElementById('honk-btn').addEventListener("submit", playSound(evt));
+document.getElementById('volume-number').addEventListener("input", changeVolume(evt, document.getElementById('volume-number').value));
 
 
-function changeVolume(event, newVolumeNumber)
+function changeVolume(evt, newVolumeNumber)
 {
-    event.preventDefault();
+    evt.preventDefault();
     let sound = document.getElementById('volume-number');
     let slider = document.getElementById('volume-slider');
     sound.value = newVolumeNumber;
@@ -13,9 +13,9 @@ function changeVolume(event, newVolumeNumber)
 
 }
 
-function playSound(event)
+function playSound(evt)
 { 
-    event.preventDefault();
+    evt.preventDefault();
     let sound = document.getElementById('volume-number').value;
     let horn = document.getElementById('horn-sound');
     horn.volume = sound / 100.0;
