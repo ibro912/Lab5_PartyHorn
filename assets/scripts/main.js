@@ -11,7 +11,7 @@ function changeVolume()
     event.preventDefault();
     let sound = document.getElementById('volume-number');
     let slider = document.getElementById('volume-slider');
-    document.getElementById("horn-sound").volume = sound/100.0;
+    document.getElementById("horn-sound").volume = sound.value/100.0;
     slider.value = sound.value;
 
 }
