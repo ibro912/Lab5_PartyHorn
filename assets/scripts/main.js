@@ -17,6 +17,6 @@ function playSound()
 }
 
 
-document.getElementById('volume-number').change = changeVolume(document.getElementById('volume-number').input);
+document.getElementById('volume-number').value = changeVolume(document.getElementById('volume-number').value);
 document.getElementById('honk-btn').onclick = playSound(); 
 // TODO
