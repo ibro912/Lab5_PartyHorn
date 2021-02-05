@@ -5,7 +5,7 @@ document.getElementById('volume-number').addEventListener("input", changeVolume(
 
 function changeVolume(event, newVolumeNumber)
 {
-    evt.preventDefault();
+    event.preventDefault();
     let sound = document.getElementById('volume-number');
     let slider = document.getElementById('volume-slider');
     sound.value = newVolumeNumber;
@@ -15,7 +15,7 @@ function changeVolume(event, newVolumeNumber)
 
 function playSound(event)
 { 
-    evt.preventDefault();
+    event.preventDefault();
     let sound = document.getElementById('volume-number').value;
     let horn = document.getElementById('horn-sound');
     horn.volume = sound / 100.0;
