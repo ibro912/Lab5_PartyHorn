@@ -31,28 +31,26 @@ function changeSlider()
 function changeVolIcon()
 {
     let volume = document.getElementById('volume-number');
-    let button = document.getElementById('honk-btn');
-    let volIcon = document.getElementById('volume-image');
 
     if(volume <= 0)
     {
-        button.disabled = true;
-        volIcon.src = "./assets/media/icons/volume-level-0.svg";
+        document.getElementById('honk-btn').disabled = true;
+        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-0.svg";
     }
     else if(volume > 0 && volume < 34)
     {
-        button.disabled = false;
-        volIcon.src = "./assets/media/icons/volume-level-1.svg";
+        document.getElementById('honk-btn').disabled = false;
+        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-1.svg";
     }
     else if(volume > 33 && volume < 67)
     {
-        button.disabled = false;
-        volIcon.src = "./assets/media/icons/volume-level-2.svg";
+        document.getElementById('honk-btn').disabled = false;
+        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-2.svg";
     }
     else
     {
-        button.disabled = false;
-        volIcon.src = "./assets/media/icons/volume-level-3.svg";
+        document.getElementById('honk-btn').disabled = false;
+        document.getElementById('volume-image').src = "./assets/media/icons/volume-level-3.svg";
     }
 }
 
